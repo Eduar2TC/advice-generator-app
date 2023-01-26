@@ -1,0 +1,106 @@
+:root{
+    /*Primary colors*/
+    --light_cyan: hsl(193, 38%, 86%);
+    --neon_green : hsl(150, 100%, 66%);
+    /*Neutral colors*/
+    --grayish_blue: hsl(217, 19%, 38%);
+    --dark_grayish_blue: hsl(217, 19%, 24%);
+    --dark_blue : hsl(218, 23%, 16%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+body{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--dark_blue);
+}
+.card{
+    width: 33.75rem;
+    height: 20.8125rem;
+    background-color: var(--dark_grayish_blue);
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 1fr 3.5fr 1fr;
+    /*for after*/
+    position: relative;
+
+}
+.advice_title h1{
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 5px;
+    color: var(--neon_green);
+    animation:
+    fadeIn 2s linear,
+    slide 500ms linear;
+}
+.advice_content{
+    padding: 20px;
+}
+.advice_content p{
+    font-size: 0.5rem;
+    font-weight:700;
+    text-align: center;
+    line-height: 35px;
+    font-size: 28px;
+    color: var(--light_cyan);
+    animation: fadeIn 5s;
+}
+.advice_line{
+    background-image: url('../images/pattern-divider-desktop.svg');
+    height: 16px;
+    width: 445px;
+    justify-self: center;
+}
+.dice-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--neon_green);
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.dice-container:hover{
+    box-shadow: -0.5px -0.5px 32px 0px var(--neon_green);
+}
+.dice-container img{
+    width: 23px;
+    height: 23px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slide {
+    from {
+        transform: translate(30%, 0);
+    }
+
+    to {
+        transform: translate(0%, 0);
+    }
+}
