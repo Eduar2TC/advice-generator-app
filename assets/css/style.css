@@ -104,3 +104,20 @@ body{
         transform: translate(0%, 0);
     }
 }
+/*Mobile screen*/
+@media (max-width: 375px) {
+    .card {
+        width: 21.4375rem;
+        height: 19.6875rem;
+    }
+    .advice_line{ 
+        width: 297px;
+        background-image: url('../images/pattern-divider-mobile.svg');
+    }
+    .advice_title h1{
+        font-size: 14px;
+    }
+    .advice_content p{
+        font-size: 20px;
+    }
+}
